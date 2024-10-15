@@ -11297,14 +11297,6 @@ footer i {
   margin-left: 1.5rem;
 }
 
-@keyframes tipe {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 100%;
-  }
-}
 .container-lg {
   border-radius: 1%;
   width: 100%;
@@ -11361,10 +11353,22 @@ footer i {
   opacity: 0.5;
 }
 
+.container-fluid .bi-lightning, .container-sm .bi-lightning, .container-md .bi-lightning, .container-lg .bi-lightning, .container-xl .bi-lightning, .container-xxl .bi-lightning {
+  animation: light 3s linear infinite;
+}
+
 @property --angle {
   syntax: "<angle>";
   inherits: false;
   initial-value: 0deg;
+}
+@keyframes tipe {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
 }
 @keyframes spin {
   from {
@@ -11375,10 +11379,6 @@ footer i {
   }
 }
 h3 i, .h3 i {
-  animation: light 3s linear infinite;
-}
-
-.container-fluid .bi-lightning, .container-sm .bi-lightning, .container-md .bi-lightning, .container-lg .bi-lightning, .container-xl .bi-lightning, .container-xxl .bi-lightning {
   animation: light 3s linear infinite;
 }
 
@@ -11435,13 +11435,6 @@ h3 i, .h3 i {
      object-fit: cover;
 }
 .main .ita {
-  grid-column: 2;
-  grid-row: 2;
-  margin: 5rem;
-  border-bottom: 1px solid #ffc107;
-}
-.main .eng {
-  display: none;
   grid-column: 2;
   grid-row: 2;
   margin: 5rem;
@@ -11541,4 +11534,35 @@ h3 i, .h3 i {
 .main .prog p {
   font-size: 0.7rem;
   margin-top: 8rem;
+}
+
+form {
+  margin: 5.5rem;
+  font-size: 1rem;
+  padding: 2rem;
+  text-align: left;
+}
+form input {
+  margin: 1rem;
+  border-radius: 10px;
+  color: #ffc107;
+}
+form textarea {
+  margin-top: 1rem;
+  margin-left: 1rem;
+  border-radius: 10px;
+  width: 80%;
+  height: 40%;
+  color: #ffc107;
+}
+form .box {
+  box-shadow: 0 0.2rem 0.2rem 0.2rem #212529;
+}
+form .box2 {
+  background-color: #212529;
+  color: #ffc107;
+}
+form .box2:hover {
+  background-color: #ffc107;
+  color: #212529;
 }/*# sourceMappingURL=style.css.map */

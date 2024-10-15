@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
 
 @import "../bootstrap/scss/bootstrap";
+
 :root{
     --bs-font-sans-serif: "Bungee", sans-serif; ;
 }
@@ -80,15 +81,7 @@ footer{
     
 }
 
-@keyframes tipe{
-    from{
-        width: 0%;
-    }
 
-    to{
-        width: 100%;
-    }
-}
 
 .container-lg{
     border-radius: 1%;
@@ -155,10 +148,28 @@ footer{
     opacity: 0.5;
 }
 
+.container-fluid{
+    .bi-lightning{
+    animation: light 3s linear infinite;
+     }
+}
+
+// @keyframe animation
+
 @property --angle{
     syntax: "<angle>";
     inherits: false;
     initial-value: 0deg;
+}
+
+@keyframes tipe{
+    from{
+        width: 0%;
+    }
+
+    to{
+        width: 100%;
+    }
 }
 
 @keyframes spin{
@@ -176,11 +187,7 @@ h3{
     }
 }
 
-.container-fluid{
-    .bi-lightning{
-    animation: light 3s linear infinite;
-     }
-}
+
 @keyframes light {
     0%{
         color: transparent;
@@ -206,6 +213,8 @@ h3{
         box-shadow: 0 0 0.5rem 0.5rem #fcd562 ;
     }
 }
+
+// CV Section
 
 .main{
     display: grid;
@@ -234,7 +243,6 @@ h3{
         img{
             object-fit: cover;
         }
-
     }
     .ita{
         grid-column: 2;
@@ -242,13 +250,6 @@ h3{
         margin: 5rem;
         border-bottom:1px solid $warning ;
 
-    }
-    .eng{
-        display: none;
-        grid-column: 2;
-        grid-row:2;
-        margin: 5rem;
-        border-bottom:1px solid $warning ;
     }
     .istr{
         border-bottom:1px solid $dark ;
@@ -351,6 +352,41 @@ h3{
         }   
 
 }
+
+// form section
+
+form{
+    margin:5.5rem;
+    font-size: 1rem;
+    padding: 2rem;
+    text-align: left;
+    
+    input{
+        margin:1rem ;
+        border-radius: 10px;
+        color: $warning;
+    }
+    textarea{
+        margin-top: 1rem;
+        margin-left: 1rem;
+        border-radius: 10px;
+        width: 80%;
+        height: 40%;
+        color: $warning;
+    }
+    .box{
+        box-shadow: 0 0.2rem 0.2rem 0.2rem $dark;
+    }
+    .box2{
+        background-color: $dark;
+        color: $warning;
+    }
+    .box2:hover{
+        background-color: $warning;
+        color: $dark;
+    } 
+}
+
 
     
 
