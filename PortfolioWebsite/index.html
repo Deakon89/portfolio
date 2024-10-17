@@ -5,7 +5,6 @@
     <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -16,6 +15,11 @@
 
 <!-- body -->
     <body>
+      <div class="bg"></div>
+      <div class="bg bg2"></div>
+      <div class="bg bg3"></div>
+      <div class="content">
+      </div>
 
         <!-- script js  -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
@@ -26,12 +30,12 @@
           <header>
 
             <!-- brand and button -->
-            <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark px-3">
+            <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
                 <div class="container-fluid">
-                  <a class="navbar-brand" href="#"><i class="bi bi-bug"></i>Francesco Cocchi</a>
+                  <a class="navbar-brand" href="#">Francesco Cocchi</a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon text-warning"></span>
                   </button>
                   <div class="collapse navbar-collapse" id="navbarNav">
             <!-- end brand end button -->
@@ -54,49 +58,70 @@
                         <a class="nav-link" href="cv.html">my CV</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="contats.html">contacts</a>
+                        <a class="nav-link" href="contats.html">contacts <i class="bi bi-envelope-at text-warning"></i></a>
                       </li>
-                    </ul>
-                    <span><a href="#form" data-bs-toggle="tooltip" data-bs-placement="bottom" title="click to enter your data and be contacted">
-                      <i class="bi bi-envelope-at"></i></a></span>
+                    </ul>    
                   </div>
                 </div>
               </nav>
-              <!-- end navigate -->
-               
+              <!-- end navigate -->      
          </header>
          <!-- end header -->
 
          <!-- hero -->
-         <div class="container-lg bg-dark mt-4 mb-1 px-3 py-6">
+          <div class="hero">
+            <div class="caboom">
+              <h1><em>Creativity</em><br> Is intelligence having fun.</h1>
+            </div>
+            <div class="img-hero">
+              <img src="asset/img/franck-Photoroom.png" alt="my-self">
+            </div>
+            <div class="hero-call">
+              <h1>I'am Francesco</h1>
+              <div class="type">
+                <h2>a FullStack Developer</h2>
+              </div>
+
+            </div>  
+          </div>
+          <!-- bootstrap hero -->
+         <!-- <div class="container-lg bg-dark mt-4 mb-1 py-5 px-2">
           <div class="row">
             <div class="col-8">
-              <h1 >I'am <br>a <em>FullStack</em> Developer</h1>
+              <h1 >I'am a<br> <em>FullStack</em> Developer</h1>
               <div class="hero-ico">
                 <a href=""><i class="bi bi-discord"></i></a>
                 <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-whatsapp"></i></a>
-                <a href=""><i class="bi bi-steam"></i></a>
-                <a href=""><i class="bi bi-xbox"></i></a>
+                <a href=""><i class="bi bi-github"></i></a>
                 <a href=""><i class="bi bi-instagram"></i></a>
               </div>
             </div>
             <div class="col-4" id="col-hero">
-              <img class="animate__animated animate__bounce" src="asset/img/franck-Photoroom.png" alt="wanm">
+              <img class="animate__animated animate__bounce" src="asset/img/franck-Photoroom.png" alt="me">
             </div>
          </div>
-         </div>
+         </div> -->
+         <!-- bootstrap hero end -->
+
           <!--end hero  -->
 
          <!-- main section -->
-         <main class="container mt-5 mb-5">
+         <main class="container">
+            <div class="about">
+              <h2>About me</h2>
+              <p>Hi, I'm Francesco and I'm a Developer.. <br>
+                I'm actually studying to become one... <br>
+                I have always had an excellent creative spirit <br> and I try to use it in everything I do, <br>
+                 especially at work.</p>
+            </div> 
+
 
           <!-- about me -->    
-             <div class="about">
+             <!-- <div class="about">
             <div class="container-fluid px-3 py-5" id="about">
               <h2><i class="bi bi-lightning"></i>About me<i class="bi bi-lightning"></i></h2>
               <div class="card bg-dark text-white">
-                <img src="asset/img/cont-flid2.jpg" class="card-img" alt="...">
+                <img src="asset/img/cont-flid2.jpg" class="card-img" alt="back-yellow">
                 <div class="card-img-overlay text-dark">
                   <p class="card-text">Hi, I'm Francesco and I'm a Developer.. <br>
                     I'm actually studying to become one... <br>
@@ -105,14 +130,14 @@
                 </div>
               </div>
              </div>
-            </div>
+            </div> --> 
             <!-- end about me -->
 
             <!-- cards section -->
-            <div class="row">
+            <div class="row g-0">
               <h3><i class="bi bi-joystick"></i>i like...<i class="bi bi-joystick"></i></h3>     
-              <div class="col-sm my-5">
-                <div class="card my-3 mx-auto" style="width: 18rem;">
+              <div class="col-sm">
+                <div class="card" style="width: 18rem;">
                   <img src="asset/img/travel the world.png" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">Travel</h5>
@@ -125,8 +150,8 @@
               </div>
               </div>
                <!--end card travel  -->
-              <div class="col-sm my-5">
-                <div class="card my-3 mx-auto" style="width: 18rem;">
+              <div class="col-sm">
+                <div class="card" style="width: 18rem;">
                   <img src="asset/img/gaming.webp" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">Gaming</h5>
@@ -138,8 +163,8 @@
                </div>
               </div>
               <!--end card gaming  -->
-              <div class="col-sm my-3">
-                <div class="card my-5 mx-auto" style="width: 18rem;">
+              <div class="col-sm">
+                <div class="card" style="width: 18rem;">
                   <img src="asset/img/fashion.jpg" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">Fashion</h5>
@@ -154,7 +179,7 @@
             <!-- end cards section -->
 
             <!-- my skils -->
-           <div class="container-fluid px-3 py-5" id="skills">
+           <!-- <div class="container-fluid px-3 py-5" id="skills">
             <h2><i class="bi bi-lightning"></i>My Skills<i class="bi bi-lightning"></i></h2>
             <div class="card bg-dark text-white">
               <img src="asset/img/cont-fluid.jpg" class="card-img" alt="...">
@@ -163,30 +188,30 @@
                   <i class="bi bi-filetype-sass"></i><i class="bi bi-bootstrap"></i></p>
               </div>
             </div>
-           </div>
+           </div> -->
            <!--end my skils -->
 
             <!-- my portfolio -->
-           <div class="container-fluid pt-3 py-3" >
+           <!-- <div class="container-fluid" >
             <h2 id="portfolio"><i class="bi bi-lightning"></i>My Projects<i class="bi bi-lightning"></i></h2>
             <div class="row">
               <!-- cards section -->
-              <div class="col-sm my-1">
-                <div class="card my-3 mx-auto" style="width: 18rem;">
+              <!-- <div class="col-sm">
+                <div class="card" style="width: 18rem;">
                   <img src="asset/img/hp.png" class="card-img-top" alt="hotel pomelia">
                   <div class="card-body">
                     <h5 class="card-title">Hotel Pomelia</h5>
                     <p class="card-text">
                       project in the process of being updated, currently unresponsive.
                       eco.hotel in Sicily.
-                      </p>
+                      </p> 
                     <a href="#" class="btn">have a look</a>
                   </div>
-              </div>
-              </div>
+              </div> -->
+              <!-- </div>    -->
               <!-- end project 1 -->
-              <div class="col-sm my-1">
-                <div class="card my-3 mx-auto" style="width: 18rem;">
+              <!-- <div class="col-sm">
+                <div class="card" style="width: 18rem;">
                   <img src="asset/img/gg.png" class="card-img-top" alt="...">                
                   <div class="card-body">
                     <h5 class="card-title">GreenGaming</h5>
@@ -197,10 +222,10 @@
                     <a href="#" class="btn btn-primary">Have a look</a>
                   </div>                  
                </div>              
-              </div>
+              </div> -->
                <!-- end project 2 -->
-              <div class="col-sm my-1">
-                <div class="card my-3 mx-auto" style="width: 18rem;">
+               <!-- <div class="col-sm">
+                <div class="card" style="width: 18rem;">
                   <img src="asset/img/hp.png" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">Green Earth</h5>
@@ -210,65 +235,27 @@
                     <a href="#" class="btn btn-primary">Have a look</a>
                   </div>
               </div>
-             </div>
+             </div>  -->
               <!-- end project 3 -->
-            </div>
+             <!-- </div>  -->
             <!-- end cards section -->
-          </div>
+          <!-- </div>  -->
              <!-- end portfolio -->
 
-        </main>
+        </main>  
         <!-- end main -->
 
         <!-- footer -->
-        <footer class="pt-3 mt-2">
+        <footer>
           <div class="row g-0">
             <div class="col">
-              <span>cell.328-2441108<br>
-                    email <br>franckdev@gmail.com<br>
-                    deakon89@gmail.com<br>
-                    francescococchi@rocketmail.com<br>
-              </span>
-            </div>
-            <div class="col fs-4 mx-2">
               <a href=""><i class="bi bi-discord"></i></a>
               <a href=""><i class="bi bi-facebook"></i></a>
-              <a href=""><i class="bi bi-whatsapp"></i></a>
+              <a href=""><i class="bi bi-github"></i></a>
               <a href=""><i class="bi bi-steam"></i></a>
               <a href=""><i class="bi bi-xbox"></i></a>
               <a href=""><i class="bi bi-instagram"></i></a>
             </div>
-            <div class="col mx-2">
-              <form class="row g-0 needs-validation" novalidate id="form">
-                <div class="col-md-4">
-                  <label for="validationCustom01" class="form-label">First name</label>
-                  <input type="text" class="form-control" id="validationCustom01" value="" required>
-                  <div class="valid-feedback">
-                    Looks good!
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <label for="validationCustom02" class="form-label">Last name</label>
-                  <input type="text" class="form-control" id="validationCustom02" value="" required>
-                  <div class="valid-feedback">
-                    Looks good!
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <label for="validationCustomUsername" class="form-label">Email</label>
-                  <div class="input-group has-validation">
-                    <span class="input-group-text" id="inputGroupPrepend">@</span>
-                    <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
-                    <div class="invalid-feedback">
-                      Please enter valid email.
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 mt-2">
-                  <button class="btn btn-primary" type="submit">send</button>
-                </div>
-              </form>    
-          </div>
           <hr>
           <div>copyright&copy;2024</div>
         </footer>
