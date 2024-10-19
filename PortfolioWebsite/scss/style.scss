@@ -2,6 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
 
+// var-root-mixin
 @mixin text-rule{
     color: $warning;
     font-style: normal;
@@ -21,7 +22,9 @@
 :root{
     --bs-font-sans-serif: "Bungee", sans-serif; ;
   }
+// end var-root-mixin
 
+// animated-background
   .bg {
     animation:slide 3s ease-in-out infinite alternate;
     background-image: linear-gradient(-60deg, $warning 50%, #ffffff 50%);
@@ -51,7 +54,9 @@
       transform:translateX(25%);
     }
   }
+// end animated-background
 
+// style
 html{
     height:100%;
     scroll-behavior: smooth;
@@ -64,12 +69,12 @@ html{
      margin: 0!important;
      padding: 0!important;
 }
-
+// nav
 header{
     margin-right: 0.5rem;
     
 }
-
+// hero-grid
 .hero{
     display: grid;
     grid-template-columns:1fr;
@@ -78,7 +83,6 @@ header{
     padding: 1rem;
     margin-top: 9rem;
     text-align: center;
-    // margin-bottom: 9rem;
     animation: fade linear;
     animation-timeline: view();
     animation-range: exit;
@@ -124,7 +128,9 @@ header{
             opacity: 0;
         }
     }
- 
+//  end hero-grid
+
+// main-container
 .skills-desktop{
     display: none;
 }
@@ -196,7 +202,9 @@ header{
         }
     
 }
+// end main-container
 
+// footer
 .link-social{
     color: $light;
     text-align: center;
@@ -212,6 +220,7 @@ header{
     }
  
   }
+//   end footer
 
 
 // form section
@@ -246,6 +255,7 @@ form{
         color: $dark;
     } 
 }
+// end form section
 
 // CV Section
 
@@ -331,6 +341,7 @@ form{
         font-size:0.5rem;
     }
 }
+// end CV section
 
 // media-query
 
@@ -394,7 +405,6 @@ form{
         padding: 1rem;
         margin-top: 6rem;
         text-align: center;
-        // margin-bottom: 9rem;
         animation: fade linear;
         animation-timeline: view();
         animation-range: exit;
@@ -441,7 +451,6 @@ form{
         margin-left: 4rem;
         margin-right: 4rem;
         text-align: center;
-        // margin-bottom: 9rem;
         animation: fade linear;
         animation-timeline: view();
         animation-range: exit;
@@ -566,7 +575,7 @@ form{
         padding: 10rem;
     }
 }    
-
+// end mediaquery
     
 
 
