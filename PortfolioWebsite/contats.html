@@ -8,17 +8,7 @@
          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
         <link rel="stylesheet" href="style/style.css">
-        <script src="js/index.js"></script>
-        <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-        </script>
-        <script type="text/javascript">
-        (function(){
-        emailjs.init({
-        publicKey: ("jgYUTrDlxz_KiO37r"),
-        });
-        })();
-        </script>
+        <link rel="icon" href="asset/img/favicon-16x16.png" sizes="16x16" type="image/png">
         <title>Portfolio Website contacts Francesco Cocchi</title>
         </head>
     <!--end head -->
@@ -50,19 +40,16 @@
                       <a class="nav-link active" aria-current="page" href="index.html">home</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="index.html">my projects</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="index.html">my skills</a>
-                    </li>
-                    <li class="nav-item">
                       <a class="nav-link" href="index.html">about me</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="index.html">my projects</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="cv.html">my CV</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="contats.html">contacts <i class="bi bi-envelope-at text-warning"></i></a>
+                      <a class="nav-link" href="contats.html">contacts <i class="bi bi-envelope-at text-warning" ></i></a>
                     </li>
                   </ul>    
                 </div>
@@ -75,17 +62,19 @@
           <!-- main section -->
          <main class="container mt-5 mb-5">
         <!-- form section -->
-        <form class="contact" action="">
+        <form action="https://api.web3forms.com/submit" method="POST">
             <legend>Contact Us</legend>
-            <input class="box" type="text" name="name" id="name" placeholder="Name" autocomplete="off">
-            <input class="box" type="text" name="surname" id="surnamae" placeholder="Surname" autocomplete="off"><br>
-            <input class="box" type="email" id="email" placeholder="Insert valid email" autocomplete="off"><br>
+            <input type="hidden" name="access_key" value="602c1213-4f95-4535-a01c-a1c162eb26ef">
+            <input class="box"  type="text" name="name" id="name" placeholder="Name" autocomplete="off" required>
+            <input class="box"  type="text" name="surname" id="surnamae" placeholder="Surname" autocomplete="off"><br>
+            <input class="box"  type="email" name="email" id="email" placeholder="Insert valid email" autocomplete="off" required><br>
             <input class="radio" type="radio" id="m" name="sex1" value="Male"><label for="m">Male</label>
             <input class="radio" type="radio" id="f" name="sex1" value="Female"><label for="f">Female</label><br>
-            <textarea class="box" name="message" id="message" placeholder="Text your message here" autocomplete="off"></textarea><br>
+            <textarea class="box" name="message" id="message" placeholder="Text your message here" autocomplete="off" required></textarea><br>
             <input class="box box2" type="reset" value="Reset">
-            <button onclick="sendMail()">Enter</button>
-            <!-- <input class="box box2" type="submit" value="Enter" onclick="sendMail()"> -->
+            <input class="box box2" type="submit" value="Enter">
+            <hr>
+            <span>powered by Web3forms</span>
         </form>
          <!-- end form -->
          </main>
@@ -106,8 +95,6 @@
           <div>copyright&copy;2024</div>
         </footer>
         <!-- end footer -->
-
-  
     </body>
 </html>
 
