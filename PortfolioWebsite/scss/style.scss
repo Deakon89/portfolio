@@ -335,6 +335,10 @@ form{
 // media-query
 
 @media (min-width:600px) {
+    .main{
+        margin-left: 15rem;
+        margin-right: 15rem;
+    }
     .sidebar{
         grid-column: 1;
         grid-row: 1;
@@ -434,6 +438,8 @@ form{
         gap: 1rem;
         padding: 1rem;
         margin-top: 6rem;
+        margin-left: 4rem;
+        margin-right: 4rem;
         text-align: center;
         // margin-bottom: 9rem;
         animation: fade linear;
@@ -483,7 +489,6 @@ form{
         padding: 1rem;   
         text-align: center;
         @include margin-tb;
-
         background-color: #ffffff0f;
         backdrop-filter: blur(10px);
         border:1px solid #ffffff;
@@ -553,6 +558,16 @@ form{
     }
     
 }
+
+@media (min-width:1500px) {
+    .hero{
+        margin-left: 12rem;
+        margin-right: 12rem;
+        padding: 10rem;
+    }
+}    
+
+    
 
 
 

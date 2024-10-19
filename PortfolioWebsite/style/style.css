@@ -10110,6 +10110,10 @@ form .box2:hover {
 }
 
 @media (min-width: 600px) {
+  .main {
+    margin-left: 15rem;
+    margin-right: 15rem;
+  }
   .sidebar {
     grid-column: 1;
     grid-row: 1;
@@ -10210,6 +10214,8 @@ form .box2:hover {
     gap: 1rem;
     padding: 1rem;
     margin-top: 6rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
     text-align: center;
     animation: fade linear;
     animation-timeline: view();
@@ -10343,5 +10349,12 @@ form .box2:hover {
     font-style: normal;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #212529;
+  }
+}
+@media (min-width: 1500px) {
+  .hero {
+    margin-left: 12rem;
+    margin-right: 12rem;
+    padding: 10rem;
   }
 }/*# sourceMappingURL=style.css.map */
