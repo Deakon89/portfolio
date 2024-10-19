@@ -2,6 +2,22 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
 
+@mixin text-rule{
+    color: $warning;
+    font-style: normal;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: $dark;
+}
+@mixin margin-tb{
+    margin-top: 12rem;
+    margin-bottom: 12rem;
+}
+
+@mixin margin-lr{
+    margin-left: 5rem;
+    margin-left: 5rem;
+}
+
 :root{
     --bs-font-sans-serif: "Bungee", sans-serif; ;
   }
@@ -51,6 +67,7 @@ html{
 
 header{
     margin-right: 0.5rem;
+    
 }
 
 .hero{
@@ -59,9 +76,9 @@ header{
     grid-auto-rows: auto;
     gap: 1rem;
     padding: 1rem;
-    margin-top: 8.5rem;
+    margin-top: 9rem;
     text-align: center;
-    margin-bottom: 8.5rem;
+    // margin-bottom: 9rem;
     animation: fade linear;
     animation-timeline: view();
     animation-range: exit;
@@ -73,8 +90,7 @@ header{
             font-size: 2rem;
             color: $dark;
             em{
-                color: $warning;
-                font-style: normal;
+                @include text-rule;
             }
         }
         }
@@ -84,16 +100,21 @@ header{
 
             img{
                 max-width: 60%;
-                border-radius: 5%;
                 background-color: $warning;
+                border-radius: 5%;
                 }       
         }
         .hero-call{
             grid-column: 1;
             grid-row: 3;
-            display: inline-block;
-            .type{
-                text-shadow: 0 1rem 1rem 1rem $dark;
+            h2{
+                @include text-rule;
+            }
+            i{
+                margin-left: 1rem;
+                font-size: 2rem;
+                 -webkit-text-stroke-width: 1px;
+                 -webkit-text-stroke-color: $light;
             }
         }
     
@@ -103,405 +124,94 @@ header{
             opacity: 0;
         }
     }
-   
+ 
+.skills-desktop{
+    display: none;
+}
 
 .container{
     grid-template-columns: 1fr;
     grid-auto-rows: auto;
     gap: 1rem;
     font-size: 1.5rem;
-    padding: 1rem;
-    margin-top: 10rem;
+    padding: 1rem;   
     text-align: center;
-    
-    // background-color: $light;  
        .about{
             grid-column: 1;
+            grid-row: 1;
+            @include margin-tb;
+            h2{
+                @include text-rule;
+            }
+            }
+        .row{
+            grid-column: 1;
             grid-row: 2;
-            margin-bottom: 10rem;
-
-         }
- 
-}
-
-
-
-
-footer{
-    background-color: $dark;
-    color: $light;
-    i{
-        font-size: 1rem;
-        margin-left: 1rem;
-    }
-   
-}
-
-
-// .container{
-//     box-shadow:1rem 1rem 1rem $dark;
-//     border-radius: 1%;
-//     background-image: url(/portfolio/PortfolioWebsite/asset/img/back.jpg);
-//     background-size: cover;
-// }
-
-// i{
-//     color: #ffc107;
-// }
-
-// .card{
-//     box-shadow:1rem 1rem 1rem $dark;
-
-// }
-
-// #about .card-text{
-//       background-color: #fde39500;
-//       backdrop-filter: blur(1rem);
-//       font-size: 1.5rem;
-// //     margin-top: 10rem;
-//        border-radius: 5%;
-//        float: right;
-//   }
-
-// #skills .card-text{
-//       background-color: #fde39500;
-//       backdrop-filter: blur(1rem);
-//       border-radius: 5%;
-// //     margin-top: 3rem;
-//      i{
-//           font-size: 7rem;
-//           color: $dark;
-//          margin-left: 2rem;
-//      }
-//  }
-
-// .btn{
-//     background-color: #ffc107 ;
-//     color: $dark;
-//     border-color: $dark;
-// }
-
-// .btn:hover{
-//     background-color: $dark ;
-//     color: #ffc107;
-//     border-color: #ffc107;
-//     transition: all .5 ease-out;
-// }
-
-
-
-
-
-// .container-lg{
-//     border-radius: 1%;
-//     width: 100%;
-//     color: $light;
-//     text-align: initial;
-//     position: relative;
-//     em{
-//         color: #ffc107;
-//         font-size: 7rem;
-//         font-style: normal;
-//         font-weight: bolder;
-         
-//     }
-   
-//     h1{
-//         padding-left: 5rem;
-
-//     }
-
-//     img{
-//         z-index: 2;
-//         width: 80%;
-//         background-color: #ffc107 ;
-//         border-radius: 10%;
-//         position: relative;
-//         transition: all 2s ease-out;
-
-//     }
-
-//     img:hover{
-//         scale: 1.1;
-//         animation: star 2s linear infinite;
-//     }
-
-//     .hero-ico{
-//         width: 100%;
-//          padding-left: 5rem;
-//         i{
-//             margin-right: 1.5rem;
-//             font-size: 1.5rem;
-//         }
-       
-//     }
-   
-// }
-
-// .container-lg::after{
-//     content: "";
-//     position: absolute;
-//     height: 101%;
-//     width: 101%;
-//     top: 50%;
-//     left: 50%;
-//     translate: -50% -50%;
-//     z-index: -1;
-//     border-radius: 1%; 
-//     background-image:repeating-conic-gradient(from var(--angle), #ffc107 , transparent 50%); 
-//     animation: 5s spin linear infinite; 
-// }
-
-// .container-lg::before{
-//     filter: blur(2rem);
-//     opacity: 0.5;
-// }
-
-// .container-fluid{
-//     .bi-lightning{
-//     animation: light 3s linear infinite;
-//      }
-// }
-
-// // @keyframe animation
-
-// @property --angle{
-//     syntax: "<angle>";
-//     inherits: false;
-//     initial-value: 0deg;
-// }
-
-// @keyframes tipe{
-//     from{
-//         width: 0%;
-//     }
-
-//     to{
-//         width: 100%;
-//     }
-// }
-
-// @keyframes spin{
-//     from{
-//         --angle: 0deg;
-//     }
-
-//     to{
-//         --angle: 360deg;
-//     }
-// }
-// h3{
-//     i{
-//         animation: light 3s linear infinite; 
-//     }
-// }
-
-
-// @keyframes light {
-//     0%{
-//         color: transparent;
-       
-//     }
-//     30%{
-//         color: #ffc107;
-       
-//     }
-//     60%{
-//         color: #fcd562;
-//     }
-//     100%{
-//         color: #fde395;
-//     }
-// }
-
-// @keyframes star{
-//     0%{
-//         box-shadow:none;
-//     }
-//     100%{
-//         box-shadow: 0 0 0.5rem 0.5rem #fcd562 ;
-//     }
-// }
-
-// 
-
-
-
-
-
-// @media (max-width:500px) {
-    //     .container-lg{
-    //      h1{
-    //         font-size: 2rem;
-    //         padding: 0.5rem;
-    //         padding-right: 2rem;
-    //         em{
-    //             font-size: 2.5rem;
-    //         }
-    //      }
-    //      form{
-    //         padding: 0;
-    //         margin: 0;
-    //      }
-    //     }
-    //     #about .card-text{
-    //         background-color: #fde39500;
-    //         backdrop-filter: blur(1rem);
-    //         font-size: 0.4rem;
-    //   //    margin-top: 10rem;
-    //         border-radius: 5%;
-    //         float: right;
-    //     }
-    //     #skills .card-text{
-    //         background-color: #fde39500;
-    //         backdrop-filter: blur(1rem);
-    //         border-radius: 5%;
-    //   //     margin-top: 3rem;
-    //        i{
-    //             font-size: 3rem;
-    //             color: $dark;
-    //   //         margin-left: 4rem;
-    //        }
-    //    }
-      
-    // }
-    
-    // @media (max-width:360px) {
-    //     .about{
-    //         img{
-    //             display: none;
-    //         }
-    //     } 
-    // }
-    
-    
-    // @media (max-width:640px) {
-    //     .container-lg{
-    //     img{
-    //         // display: none;
-    //      }
-    //      .hero-ico{
-    //         padding-left: 1,5rem;
-    //         i{
-    //          font-size: 1.5rem;
-    
-    //         }
-    //     }
-    //     }
-    // }
-    
-    // @media (max-width:800px) {
-    //     #about .card-text{
-    //         background-color: #fde39500;
-    //         backdrop-filter: blur(1rem);
-    //         font-size: 0.8rem;
-    //   //    margin-top: 10rem;
-    //         border-radius: 5%;
-    //         float: right;
-    //     }
-    // }
-    
-    
-    // @media (max-width:1400px) {
-    //     .container-lg{
-    //         em{
-    //             color: #ffc107;
-    //             font-size: 4rem;
-    //             font-style: normal;
-    //             font-weight: bolder;
-             
-    //         }
-       
-    //         h1{
-    //             padding-left: 1rem;
-    
-    //         }
-    
-    //         img{
-    //             z-index: 2;
-    //             width: 80%;
-    //             background-color: #ffc107 ;
-    //             border-radius: 10%;
-    //             position: relative;
-    //             transition: all 2s ease-out;
-    //         }
-    //     }
-    // }
-
-// @media  (max-width:350px){  
-//     .main{
-//         width: 100%;
-//         font-size:0.5rem; 
-//         .sidebar{
-//             margin-top: 4rem;
-//             text-align: center;
-//         }
-//         .mainbar{
-//             text-align: center;
-//             padding: 1rem;
-//             padding-left: 2rem;
-//             .ita{
-//                 margin-right: 0.5rem;
-//                 margin-left: 0.5rem;
-//             }
-//         }
-
-//     }
-    
-// }
-
-// @media (max-width:650px) {
-//     body{
-
-//         background-color: $dark;
-//     }
-//     .main{
-//         width: 100%;
-//         margin: 0!important;
-//         padding: 0!important;
-//         align-content: center;
-//         display: grid;
-//         grid-template-columns: 1fr;
-//     }
-//     .sidebar{
-//         grid-column:1;
-//         grid-row: 1;
-//         margin-top: 4rem; 
-//     }
-//     .mainbar{
-//         grid-column:1;
-//         grid-row: 2;
-//     }
-//     .container-lg::after{
-//         display: none;
-//     }
-
-// }
-
-
-
-// @media (max-width:845px) {
-//     .main{
-//         width: 100%;
-//         margin: 0 !important;;
-//         display: grid;
-//         grid-template-columns: 1fr;
-//         justify-content: center;
-//     }
-//     .sidebar{
-//         grid-column:1 ;
-//         grid-row: 1;
-//         font-size: 1rem;
+            @include margin-tb;
+            margin:1.5rem;
+            h2{
+                @include text-rule;
+                margin-bottom: 3rem;
+            }
+            .card{
+                margin-bottom: 3rem;
+                h5{
+                    @include text-rule;
+                }
+            }
+            }
+        .skills{
+            grid-column: 1;
+            grid-row: 3;
+            text-align: center;
+            @include margin-tb;
+                h2{
+                    @include text-rule;
+                    margin-bottom: 3rem;
+                }
                 
-//     }
-//     .mainbar{
-//         grid-column:1;
-//          grid-row: 2;
-//     }
-// }
+                }
+        
+        .portfolio{
+            grid-column: 1;
+            grid-row: 4;
+            text-align: center;
+            @include margin-tb;
+            h2{
+                @include text-rule;
+                margin-bottom: 3rem;
+            }
+                }
+        .row{
+            grid-column: 1;
+            grid-row: 5;
+            @include margin-tb;
+            margin:1.5rem;
+            .card{
+                margin-bottom: 3rem;
+                h5{
+                        @include text-rule;
+                }
+            }
+        }
+    
+}
 
-
-
+.link-social{
+    color: $light;
+    text-align: center;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: $dark;
+    .icon{
+        i{
+            margin-left: 1rem;
+            font-size: 2rem;
+             -webkit-text-stroke-width: 1px;
+             -webkit-text-stroke-color: $light;
+        }
+    }
+ 
+  }
 
 
 // form section
@@ -541,35 +251,65 @@ form{
 
 .main{
     display: grid;
-    grid-template-columns:1fr 3fr ;
-    background-color: $dark;
-    color: $warning;
-    margin: 4rem;
-    padding: 4rem; 
-    border-radius: 2%;  
+    grid-template-columns:1fr;
+    margin-top: 2rem;
+    border-radius: 2%;
+    
 }
 .sidebar{
     grid-column: 1;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    gap: 1rem;
     font-size: 0.7rem;
     text-align: left;
-    background-color: $warning;
+    background-color: #ffffff0f;
+    backdrop-filter: blur(10px);
+    border:1px solid #ffffff;
+    box-shadow:0 0.7rem 0.7rem 0.4rem #ffffff;
     color: $dark;
-    padding: 1rem;
+    padding: 0.5rem;
     border-radius: 2%;
+    .img-info{
+        grid-column: 1;
+        grid-row: 2;
+    }
     .card{
         overflow: hidden;
-        }
         img{
-        object-fit: cover;
-        max-width: fit-content;
+            object-fit: cover;
+            max-width: fit-content;
+            }
         }
+    .istr{
+        grid-column: 1;
+        grid-row: 3;
+    }
+    .ling{
+        grid-column: 1;
+        grid-row: 4;
+    }
+    .soft{
+        grid-column: 1;
+        grid-row: 5;
+    }
+    .frame{
+        grid-column: 1;
+        grid-row: 6;
+    }
+       
 }
 .mainbar{
-    grid-column: 2;
+    grid-column: 1;
+    grid-row: 2;
     font-style: 1rem;
     text-align: left;
-    padding: 1rem;
+    padding: 0.5rem;
+    color: $dark;
     .ita{
+        margin-top: 1rem;
         margin-bottom: 4rem;
     }
     .desc{
@@ -583,6 +323,7 @@ form{
         table{
             color: $warning;
         }
+
     }
     .privacy{
         border-top: 1px solid $warning;
@@ -590,6 +331,242 @@ form{
         font-size:0.5rem;
     }
 }
+
+// media-query
+
+@media (min-width:600px) {
+    .main{
+        margin-left: 15rem;
+        margin-right: 15rem;
+    }
+    .sidebar{
+        grid-column: 1;
+        grid-row: 1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: auto;
+        gap: 1rem;
+        font-size: 1rem;
+        text-align: left;
+        color: $dark;
+        padding: 0.5rem;
+        border-radius: 2%;
+        .img-info{
+            grid-column: 1;
+            grid-row: 2;
+        }
+        .card{
+            overflow: hidden;
+            img{
+                object-fit: cover;
+                max-width: fit-content;
+                }
+            }
+        .istr{
+            grid-column: 1;
+            grid-row: 3;
+        }
+        .ling{
+            grid-column: 1;
+            grid-row: 4;
+        }
+        .soft{
+            grid-column: 2;
+            grid-row: 3;
+            border-left: 1px solid $dark;
+        }
+        .frame{
+            grid-column: 2;
+            grid-row: 4;
+            border-left: 1px solid $dark;
+        }
+           
+    }
+}
+
+
+@media (min-width:425px) {
+    .hero{
+        display: grid;
+        grid-template-columns:1fr;
+        grid-auto-rows: auto;
+        gap: 1rem;
+        padding: 1rem;
+        margin-top: 6rem;
+        text-align: center;
+        // margin-bottom: 9rem;
+        animation: fade linear;
+        animation-timeline: view();
+        animation-range: exit;
+        .caboom{
+            grid-column: 1;
+            grid-row: 1;
+    
+            h1{
+                font-size: 2rem;
+                color: $dark;
+                em{
+                    @include text-rule;
+                }
+            }
+            }
+            .img-hero{
+                grid-column: 1;
+                grid-row: 2;
+    
+                img{
+                    max-width: 40%;
+                    background-color: $warning;
+                    border-radius: 5%;
+                    }       
+            }
+            .hero-call{
+                grid-column: 1;
+                grid-row: 3;
+                h2{
+                    @include text-rule;
+                }
+            }
+        
+    }  
+}
+@media (min-width:768px) {
+    .hero{
+        display: grid;
+        grid-template-columns:1fr 1fr;
+        grid-auto-rows: auto;
+        gap: 1rem;
+        padding: 1rem;
+        margin-top: 6rem;
+        margin-left: 4rem;
+        margin-right: 4rem;
+        text-align: center;
+        // margin-bottom: 9rem;
+        animation: fade linear;
+        animation-timeline: view();
+        animation-range: exit;
+        background-color: #ffffff0f;
+        backdrop-filter: blur(10px);
+        border:1px solid #ffffff;
+        box-shadow:0 0.7rem 0.7rem 0.4rem #ffffff;
+        .caboom{
+            grid-column: 2;
+            grid-row: 1;
+            border-bottom: 2px double $dark;
+
+            h1{
+                font-size: 4rem;
+                color: $dark;
+                em{
+                    @include text-rule;
+                }
+            }
+            }
+            .img-hero{
+                grid-column: 1;
+                grid-row: 1/span 2;
+    
+                img{
+                    max-width: 60%;
+                    background-color: $warning;
+                    border-radius: 5%;
+                    }       
+            }
+            .hero-call{
+                grid-column: 2;
+                grid-row: 2;
+                h2{
+                    @include text-rule;
+                }
+            }
+        
+    }
+    .container{
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+        gap: 1rem;
+        font-size: 1.5rem;
+        padding: 1rem;   
+        text-align: center;
+        @include margin-tb;
+        background-color: #ffffff0f;
+        backdrop-filter: blur(10px);
+        border:1px solid #ffffff;
+        box-shadow:0 0.7rem 0.7rem 0.4rem #ffffff;
+           .about{
+                grid-column: 1;
+                grid-row: 1;
+                @include margin-tb;
+                h2{
+                    @include text-rule;
+                }
+                }
+            .row{
+                grid-column: 1;
+                grid-row: 2;
+                @include margin-tb;
+                margin:1.5rem;
+                h2{
+                    @include text-rule;
+                
+                }
+                .card{
+                
+                    h5{
+                        @include text-rule;
+                    }
+                }
+                }
+            .skills{
+                display: none;
+            }    
+            .skills-desktop{
+                display: inherit;
+                .row{
+                    grid-column: 1;
+                    grid-row: 3;
+                    text-align: center;
+                    h2{
+                        @include text-rule;
+                        margin-bottom: 3rem;
+                    }
+                }
+                    
+                }
+            
+            .portfolio{
+                grid-column: 1;
+                grid-row: 4;
+                text-align: center;
+                h2{
+                    @include text-rule;
+                    margin-bottom: 3rem;
+                }
+                    }
+            .row{
+                grid-column: 1;
+                grid-row: 5;
+                margin:1.5rem;
+                .card{
+                    margin-bottom: 3rem;
+                    h5{
+                            @include text-rule;
+                    }
+                }
+            }
+        
+    }
+    
+}
+
+@media (min-width:1500px) {
+    .hero{
+        margin-left: 12rem;
+        margin-right: 12rem;
+        padding: 10rem;
+    }
+}    
+
     
 
 
