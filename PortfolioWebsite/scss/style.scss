@@ -1,5 +1,7 @@
 @import "../bootstrap/scss/bootstrap";
 
+@import "variables";
+
 @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
 
 // var-root-mixin
@@ -101,12 +103,20 @@ header{
         .img-hero{
             grid-column: 1;
             grid-row: 2;
-
+            overflow: hidden;
             img{
                 max-width: 60%;
                 background-color: $warning;
                 border-radius: 5%;
-                }       
+                -webkit-transform: scale(1);
+	            transform: scale(1);
+	            -webkit-transition: .3s ease-in-out;
+	            transition: .3s ease-in-out;
+                }
+            img:hover{
+                -webkit-transform: scale(1.3);
+	            transform: scale(1.3);
+            }       
         }
         .hero-call{
             grid-column: 1;
@@ -227,12 +237,14 @@ header{
 
 form{
     font-size: 1rem;
-    padding: 1rem;
     text-align: left;
-    
+    display: flex;
+    flex-direction: column;
+ 
+
+ 
     input{
         margin:1rem ;
-        border-radius: 10px;
         color: $warning;
     }
     textarea{
@@ -393,6 +405,9 @@ form{
         }
            
     }
+    form{
+        margin: 10rem;
+    }
 }
 
 
@@ -438,6 +453,9 @@ form{
                 }
             }
         
+    }
+    form{
+        margin: 5rem;
     }  
 }
 @media (min-width:768px) {
@@ -564,6 +582,10 @@ form{
                 }
             }
         
+    }
+
+    form{
+        margin: 15rem;
     }
     
 }

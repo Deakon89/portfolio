@@ -9861,11 +9861,17 @@ header {
 .hero .img-hero {
   grid-column: 1;
   grid-row: 2;
+  overflow: hidden;
 }
 .hero .img-hero img {
   max-width: 60%;
   background-color: #ffc107;
   border-radius: 5%;
+  transform: scale(1);
+  transition: 0.3s ease-in-out;
+}
+.hero .img-hero img:hover {
+  transform: scale(1.3);
 }
 .hero .hero-call {
   grid-column: 1;
@@ -9996,12 +10002,12 @@ header {
 
 form {
   font-size: 1rem;
-  padding: 1rem;
   text-align: left;
+  display: flex;
+  flex-direction: column;
 }
 form input {
   margin: 1rem;
-  border-radius: 10px;
   color: #ffc107;
 }
 form textarea {
@@ -10158,6 +10164,9 @@ form .box2:hover {
     grid-row: 4;
     border-left: 1px solid #212529;
   }
+  form {
+    margin: 10rem;
+  }
 }
 @media (min-width: 425px) {
   .hero {
@@ -10204,6 +10213,9 @@ form .box2:hover {
     font-style: normal;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #212529;
+  }
+  form {
+    margin: 5rem;
   }
 }
 @media (min-width: 768px) {
@@ -10349,6 +10361,9 @@ form .box2:hover {
     font-style: normal;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #212529;
+  }
+  form {
+    margin: 15rem;
   }
 }
 @media (min-width: 1500px) {
